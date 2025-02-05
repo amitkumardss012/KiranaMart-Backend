@@ -23,7 +23,7 @@ app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
 app.use("/uploads", express_1.default.static(path_1.default.join(__dirname, "../uploads")));
 app.use((0, cors_1.default)({
-    origin: env_1.env.frontendUrl,
+    origin: [env_1.env.frontendUrl, env_1.env.frontendUrl1],
     credentials: true
 }));
 // Routes

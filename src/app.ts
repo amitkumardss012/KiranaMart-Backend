@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(coookieParser())
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 app.use(cors({
-    origin: env.frontendUrl,
+    origin: [env.frontendUrl as string, env.frontendUrl1!],
     credentials: true
 }))
 
